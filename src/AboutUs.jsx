@@ -1,5 +1,7 @@
 import React from 'react';
 import './AboutUs.css';
+import { useDispatch } from 'react-redux';
+import { addItem } from './CreateSlice';
 
 function AboutUs() {
   return (
@@ -29,4 +31,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default AboutUs;
