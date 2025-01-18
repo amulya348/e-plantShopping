@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import ProductList from './ProductList';
 import './App.css';
@@ -11,10 +10,12 @@ function App() {
   const handleGetStartedClick = () => {
     setShowProductList(true);
   };
-
+  const handleReturnClick=()=> {
+    setShowProductList(false);
+  }
   return (
     <div className="app-container">
-      <div className={`landing-page ${showProductList ? 'fade-out' : ''}`}>
+      <div className={landing-page ${showProductList ? 'fade-out' : ''}}>
         <div className="background-image"></div>
         <div className="content">
          <div className="landing_content">
@@ -32,14 +33,11 @@ function App() {
           </div>
 
       </div>
-      <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
-        <ProductList />
+      <div className={product-list-container ${showProductList ? 'visible' : ''}}>
+        <ProductList toLanding={handleReturnClick} />
       </div>
     </div>
   );
 }
 
-export default App;
-
-
-
+export default App;
